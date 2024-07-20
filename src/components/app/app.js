@@ -7,9 +7,9 @@ import "./app.css";
 
 function App() {
   const data = [
-    { name: "Leto J.", salary: 3000, increase: true },
-    { name: "Nick K.", salary: 2000, increase: false },
-    { name: "Stanislav K.", salary: 1231000, increase: true },
+    { name: "Leto J.", salary: 3000, increase: true, id: "1" },
+    { name: "Nick K.", salary: 2000, increase: false, id: "2" },
+    { name: "Stanislav K.", salary: 1231000, increase: true, id: "3" },
   ];
   return (
     <div className="app">
