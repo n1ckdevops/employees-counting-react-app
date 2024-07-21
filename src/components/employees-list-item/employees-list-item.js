@@ -20,13 +20,14 @@ class EmployeesListItem extends Component {
   };
 
   render() {
-    const { name, salary } = this.props;
+    const { name, salary, onDelete } = this.props;
     const { increase, like } = this.state;
 
     let classNames = "list-group-item d-flex justify-content-between";
     if (increase) {
       classNames += " increase";
-    } else if (like) {
+    }
+    if (like) {
       classNames += " like";
     }
     return (
@@ -39,6 +40,7 @@ class EmployeesListItem extends Component {
           className="list-group-item-input"
           defaultValue={salary + "$"}
         />
+
         <div className="d-flex justify-content-center align-items-center">
           <button
             type="button"
@@ -48,7 +50,11 @@ class EmployeesListItem extends Component {
             <i className="fas fa-cookie"></i>
           </button>
 
-          <button type="button" className="btn-trash btn-sm ">
+          <button
+            type="button"
+            className="btn-trash btn-sm "
+            onClick={onDelete}
+          >
             <i className="fas fa-trash"></i>
           </button>
           <i className="fas fa-star"></i>
