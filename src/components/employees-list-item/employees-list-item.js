@@ -19,7 +19,11 @@ const EmployeesListItem = (props) => {
   }
   return (
     <li className={classNames}>
-      <span className="list-group-item-label" onClick={onToggleRise}>
+      <span
+        className="list-group-item-label"
+        onClick={onToggleRise}
+        style={{ fontSize: 40, color: "red" }}
+      >
         {name}
       </span>
       <input
